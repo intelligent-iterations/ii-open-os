@@ -1,0 +1,25 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+
+# Environment and credentials — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*-key.json
+service-account*.json
+ii-os-connection.json
+
+# Test + coverage
+coverage/
+
+# Editors / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
