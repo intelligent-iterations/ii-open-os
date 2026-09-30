@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "activation": "disabled",
+  "costOwner": "customer",
+  "runtimeSource": {
+    "repository": "intelligent-iterations/ii-open-agent-runtime-internal",
+    "revision": "5f09db47a1055210be688bd781f0dbeabee69d47",
+    "readSshKeySecret": "AGENT_FACTORY_RUNTIME_DEPLOY_KEY"
+  },
+  "configurationDigest": "sha256:f2cda293a0b268c607adbb88b0d16d4696dde249cead1f812bda159836aedf31",
+  "maximumWorkflowRunNumber": 100,
+  "maximumAttemptsPerWorkflowRun": 1,
+  "maximumWorkflowJobsBeforeRenewal": 100,
+  "maximumRunnerMicrousdBeforeRenewal": 12000000,
+  "maximumAdmittedRunsPerMonth": 20,
+  "configuredMonthlyExecutionLimitMicrousd": 20000000,
+  "maximumModelMicrousdPerRun": 1000000,
+  "maximumRunnerMicrousdPerAdmittedJob": 120000,
+  "maximumAdmittedExecutionMicrousdBeforeMonthlyLimit": 22400000,
+  "maximumArtifactBytesPerRun": 1048576,
+  "maximumRetainedArtifactBytes": 104857600,
+  "retentionDays": 7,
+  "approvalRequired": [
+    "GitHub-hosted runner SKU and price",
+    "pre-admission events and failed setup attempts",
+    "Actions artifact storage and transfer",
+    "model SKU and configured prices",
+    "provider billing ceilings"
+  ],
+  "activationVariables": [
+    "AGENT_FACTORY_ENABLED",
+    "AGENT_FACTORY_BUDGET_APPROVED"
+  ],
+  "rollback": "Set AGENT_FACTORY_ENABLED=false and cancel any running Agent Factory job."
+}
